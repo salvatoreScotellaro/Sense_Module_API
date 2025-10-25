@@ -4,10 +4,11 @@ version = "0.1.0"
 description = "Simple API implementation for robot Sense module"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [bottle==0.13.4
-certifi==2025.10.5
-charset-normalizer==3.4.4
-idna==3.11
-requests==2.32.5
-urllib3==2.5.0
-uv==0.9.5]
+dependencies = [
+    "bottle==0.13.4"
+    "certifi==2025.10.5"
+    "charset-normalizer==3.4.4"
+    "idna==3.11"
+    "requests==2.32.5"
+    "urllib3==2.5.0"
+    "uv==0.9.5"]
