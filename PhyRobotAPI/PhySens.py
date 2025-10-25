@@ -9,6 +9,7 @@ import glob
 import json
 from pathlib import Path
 from os import sep
+import random
 
 class PhySensor:
 
@@ -52,7 +53,7 @@ class DistanceSensor(PhySensor):
             Read the distance sensor from the hardware layer
             skip all physical issues
         """
-        return 2.5 # any value is ok, so far
+        return random.uniform(0,10) # Random forward distance in meters
 
 class TemperatureSensor(PhySensor):
     """
@@ -63,7 +64,7 @@ class TemperatureSensor(PhySensor):
         self._type = "temperature"
 
     def read(self) -> float:
-        return 4.0
+        return random.uniform(0,30) # Random environment temperature in C°
     
 class PressionSensor(PhySensor):
     """
@@ -74,12 +75,12 @@ class PressionSensor(PhySensor):
         self._type = "pression"
 
     def read(self) -> float:
-        return 3.0
+        return random.uniform(980,1040) # Random environment pression in hPA
 
 if __name__ == "__main__":
 
     # Instantiate sensors
-    ds1 = DistanceSensor("test_distance_sensor", (-1,1), "test.json")
+    ds1 = DistanceSensor("test_distance_sensor", (-10,10), "test.json")
     ts1 = TemperatureSensor("test_temperature_sensor", (-1,1), "test.json")
     ps1 = PressionSensor("test_pression_sensor", (-1,1), "test.json")
 

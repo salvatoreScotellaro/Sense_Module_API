@@ -38,7 +38,7 @@ def read_sensors(type:str) -> dict:
 if __name__ == "__main__":
 
     # Instantiate sensors
-    ds1 = DistanceSensor("distance_sensor_1", (-1,1), "test.json")
+    ds1 = DistanceSensor("distance_sensor_1", (-10,10), "test.json")
     ts1 = TemperatureSensor("temperature_sensor_1", (-1,1), "test.json")
     ps1 = PressionSensor("pression_sensor_1", (-1,1), "test.json")
 
