@@ -43,6 +43,9 @@ class DistanceSensor(PhySensor):
     """
         Proximity distance sensor monodimensional
     """
+    def __init__(self, name, work_range, config_file):
+        super().__init__(name, work_range, config_file)
+        self._type = "distance"
 
     def read(self) -> float:
         """
@@ -51,8 +54,38 @@ class DistanceSensor(PhySensor):
         """
         return 2.5 # any value is ok, so far
 
+class TemperatureSensor(PhySensor):
+    """
+        Temperature sensor monodimensional
+    """
+    def __init__(self, name, work_range, config_file):
+        super().__init__(name, work_range, config_file)
+        self._type = "temperature"
+
+    def read(self) -> float:
+        return 4.0
+    
+class PressionSensor(PhySensor):
+    """
+        Pression sensor monodimensional
+    """
+    def __init__(self, name, work_range, config_file):
+        super().__init__(name, work_range, config_file)
+        self._type = "pression"
+
+    def read(self) -> float:
+        return 3.0
 
 if __name__ == "__main__":
-    ds1 = DistanceSensor("test_sensor", (-1,1), "test.json")
+
+    # Instantiate sensors
+    ds1 = DistanceSensor("test_distance_sensor", (-1,1), "test.json")
+    ts1 = TemperatureSensor("test_temperature_sensor", (-1,1), "test.json")
+    ps1 = PressionSensor("test_pression_sensor", (-1,1), "test.json")
+
     print(ds1.read())
+    print(ts1.read())
+    print(ps1.read())
+
+
 

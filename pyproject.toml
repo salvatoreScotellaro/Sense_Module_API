@@ -1,7 +1,7 @@
 [project]
 name = "sense-module-api"
 version = "0.1.0"
-description = "Add your description here"
+description = "Simple API implementation for robot Sense module"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [bottle==0.13.4
