@@ -25,17 +25,17 @@ To run the code, there are two possible ways. Starting from the simplest one, th
 - Activate the virual environment using `source venv/bin/activate`.
 - Install project with required dependencies using `pip install .`.
 - Start the PhySens server with command `python3 phySens_server.py`.
-- Start the Sense Module API with command `python3 sense_app.py`.
+- Start the Sense Module API with command `python3 sense_app.py` in another terminal window.
 - Hit the endpoint at this link: http://localhost:8001/sense.
 
 Another possibility is use the `.zip` file provided as delivery of the homework. In this case, the procedure is described by the following points.
 
 - Start WSL and create a new directory for the project with any name.
-- Copy the `.zip` file in the created directory and unzip it with `unzip sense_module_API_deliver.zip`.
+- Copy the `.zip` file in the created directory and unzip it with `unzip sense_module_API.zip`.
 - Call the directory with the command `cd sense_module_API`.
 - Create a new virtual environment with `python3 -m venv venv`.
 - Activate the virual environment using `source venv/bin/activate`.
 - Install project with required dependencies using `pip install .`.
 - Start the PhySens server with command `python3 phySens_server.py`.
-- Start the Sense Module API with command `python3 sense_app.py`.
+- Start the Sense Module API with command `python3 sense_app.py` in another terminal window.
 - Hit the endpoint at this link: http://localhost:8001/sense.
